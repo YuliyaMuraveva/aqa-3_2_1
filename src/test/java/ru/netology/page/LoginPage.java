@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
 import ru.netology.data.DataHelper;
 
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
@@ -34,6 +34,7 @@ public class LoginPage {
 
     public void isBlocked(DataHelper.AuthInfo info) {
         login(info);
-        loginButton.shouldBe(Condition.disabled);
+        loginField.shouldBe(readonly);
+        loginButton.shouldBe(hidden);
     }
 }

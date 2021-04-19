@@ -42,7 +42,6 @@ public class AppDeadlineTest {
         val authInfo = DataHelper.getInvalidPass();
         loginPage.login(authInfo);
         loginPage.login(authInfo);
-        loginPage.login(authInfo);
         loginPage.isBlocked(authInfo);
     }
 }
